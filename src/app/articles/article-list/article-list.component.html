@@ -1,0 +1,21 @@
+<h2>Articles</h2>
+<table>
+    <thead>
+        <tr>
+            <th>
+                #
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Description
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr app-article-details *ngFor="let article of articles" [article]="article"></tr>
+    </tbody>
+</table>
+<app-article-creation *ngIf="adding" (addRequest)="saveArticle($event)" (cancelRequest)="cancelAdding()"></app-article-creation>
+<button (click)="addArticle()" *ngIf="!adding">Add Article</button>

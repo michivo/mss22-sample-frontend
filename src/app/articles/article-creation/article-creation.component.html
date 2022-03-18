@@ -1,0 +1,23 @@
+<div>
+    <label for="article-identifier">Article Number: </label>
+    <input id="article-identifier" [(ngModel)]="article.identifier" placeholder="1234567890128">
+</div>
+<div>
+    <label for="article-identifier">Article Number Type: </label>
+    <select [(ngModel)]="article.identifierType">
+        <option value="ean13">EAN13</option>
+        <option value="custom">Custom</option>
+    </select>
+</div>
+<div>
+    <label for="article-name">Article Name: </label>
+    <input id="article-name" [(ngModel)]="article.name" placeholder="Name">
+</div>
+<div>
+    <label for="article-description">Article Description: </label>
+    <input id="article-description" [(ngModel)]="article.description" placeholder="Description">
+</div>
+
+
+<button (click)="saveArticle()">Save</button>
+<button (click)="cancel()">Cancel</button>
